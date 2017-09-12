@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 
 
 </head>
@@ -19,17 +21,21 @@
 
     </div>
 
-    <button id="daily" style="position: absolute;width: 1290px;height: 219px;left: 115px;top: 242px;background: #F2994A;box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);border-radius: 20px;font-size: 72px;" value="">Daily</button>
+    <button id="daily" style="position: absolute;width: 1290px;height: 219px;left: 115px;top: 242px;background: #F2994A;box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);border-radius: 20px;font-size: 72px;" value="daily">Daily</button>
 
-    <button id="weekly" style="position: absolute;width: 1290px;height: 219px;left: 115px;top: 500px;background: #2D9CDB;box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);border-radius: 20px;font-size: 72px;">Weekly</button>
-
-
-    <button id="monthly" style="position: absolute;width: 1290px;height: 219px;left: 115px;top: 759px;bottom: 100px;background: #6FCF97;box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);border-radius: 20px;font-size: 72px;">Monthly</button>
+    <button id="weekly" style="position: absolute;width: 1290px;height: 219px;left: 115px;top: 500px;background: #2D9CDB;box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);border-radius: 20px;font-size: 72px;" value="weekly">Weekly</button>
 
 
+    <button id="monthly" style="position: absolute;width: 1290px;height: 219px;left: 115px;top: 759px;bottom: 100px;background: #6FCF97;box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);border-radius: 20px;font-size: 72px;" value="monthly">Monthly</button>
 
 
-
+    <script>
+        var filter;
+        $("button").click(function() {
+            filter = $(this).val();
+            window.location.href = "business.stats.html?value=" + filter;
+        });
+    </script>
 </body>
 
 </html>
