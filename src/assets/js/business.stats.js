@@ -112,8 +112,12 @@
      ["Dec", 100],
  ];
  //---------------------------------------------------------------------------------------
+ var url = window.location.href;
+ var key = url.indexOf('=');
+ var filter;
+ filter = url.substring(key + 1, (url.length));
 
- var filter = 'monthly';
+
  //bar graph
  google.charts.load('current', {
      packages: ['corechart', 'bar']
