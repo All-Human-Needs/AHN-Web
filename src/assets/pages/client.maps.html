@@ -3,11 +3,46 @@
 <html>
 
 <head>
-    <title></title>
+    <title>Map page</title>
+
+    <!-- core css -->
+    <link rel="stylesheet" href="../css/Maps.css">
 
 </head>
 
 <body>
+
+    <div class = 'navigation'>
+    </div>
+
+    <form id='search-form'>
+        <input type="text" id="searchBar" placeholder="search...">
+    </form>
+
+    <form id='filter-form'>
+        <div class='filters-GM'>
+            <h3>FILTERS</h3>
+
+            <span>prioritise:</span><br>
+            <input type="checkbox" />Fullness<br>
+            <input type="checkbox" />Distance<br>
+
+            <span>type of place:</span><br>
+            <input type="checkbox" />Restaurant<br>
+            <input type="checkbox" />Government<br>
+            <input type="checkbox" />Emergency<br>
+            <input type="checkbox" />Cinema<br>
+            <input type="checkbox" />etc...<br>
+        </div>
+    </form>
+
+
+    <!-- actual map starts -->
+    <div id='map-GM'></div>
+    <script src='../js/Maps.js'></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqzDWr5aRpgI26JSIJXy-4198ssX4bxq4&callback=initMap"></script>
+    <!-- actual map ends -->
+
 
 </body>
 
