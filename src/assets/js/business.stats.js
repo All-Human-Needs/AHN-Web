@@ -113,7 +113,9 @@
  ];
  //---------------------------------------------------------------------------------------
 
- var filter = 'monthly';
+ var filter = document.querySelector('#daily').addEventListener('click', function daily() {
+
+ });
  //bar graph
  google.charts.load('current', {
      packages: ['corechart', 'bar']
