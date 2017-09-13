@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
     <title>Client Home</title>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
@@ -12,13 +10,11 @@
             width: 25%;
             height: 25%;
         }
-        
         .categories {
             width: 100%;
             height: 15vh;
             margin-top: 5px;
         }
-        
         .ahn-header {
             margin: 0px;
             width: 100%;
@@ -27,7 +23,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="container-fluid">
         <div class=" ahn-header" style="background-color:green;">
@@ -36,21 +31,30 @@
                 <h2> Where Do You Want To Go Today</h2>
             </div>
             <div class="col-md-3 "><img class="user" src="http://via.placeholder.com/300" alt="User Placeholder"></div>
-
         </div>
-
         <div>
-            <button class="btn categories">Emergency Building</button>
+            <button id="btn-emergency" class="btn categories">Emergency Building</button>
         </div>
-
         <div>
-            <button class="btn categories">Restaurants</button>
+            <button id="btn-restuarants" class="btn categories">Restaurants</button>
         </div>
-
         <div>
-            <button class="btn categories">Government Buildings</button>
+            <button id="btn-gov" class="btn categories">Government Buildings</button>
         </div>
-    </div>
-</body>
-
+            <script>
+            document.querySelector('#btn-emergency').addEventListener('click',function () {
+                clientNavigation();
+            })
+            document.querySelector('#btn-resturant').addEventListner('click',function () {
+                clientNavigation();
+            })
+            document.querySelector('#btn-gov').addEventListner('click',function (){
+                clientNavigation();
+            })
+            function clientNavigation() {
+                window.location.href = 'client.maps.html';
+            }
+            </script>
+        </div>  
+    </body>
 </html>
